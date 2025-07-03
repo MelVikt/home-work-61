@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= article.title %></title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="box-article">
+  <h1 class="heading"><%= article.title %></h1>
+  <p class="text-user">Автор: <a href="/users/<%= user.id %>"><%= user.name %></a></p>
+  <div class="text-content"><%= article.content %></div>
+  <% if (from === 'list') { %>
+    <a class="link-back" href="/articles">← Назад до списку статей</a>
+  <% } else { %>
+    <a class="link-back" href="/users/<%= user.id %>">Назад до авторів</a>
+  <% } %>
+</div>
+</body>
+</html>

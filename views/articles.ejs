@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Всі статті</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<h1 class="heading-lg">Всі статті</h1>
+<ul class="content-list">
+  <% articles.forEach(article => { %>
+    <li class="list-item-articles">
+      <a href="/users/<%= article.userId %>/articles/<%= article.id %>?from=list">
+        <%= article.title %> (автор: <%= article.author %>)
+      </a>
+    </li>
+  <% }) %>
+</ul>
+<a class="link-back" href="/">На головну</a>
+
+</body>
+</html>

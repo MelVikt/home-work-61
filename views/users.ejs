@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Користувачі</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<h1 class="heading">Список авторів</h1>
+<ul class="content-list">
+  <% users.forEach(user => { %>
+    <li class="list-item"><a href="/users/<%= user.id %>"><%= user.name %></a></li>
+  <% }) %>
+</ul>
+<a class="link-back" href="/">На головну</a>
+</body>
+</html>
